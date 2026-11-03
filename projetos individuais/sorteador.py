@@ -30,38 +30,33 @@ def Menu():
 ''')
     return input('>>> ')
 
-while True:
-    try:
-        lista_numeros = []
-        menu = Menu()
+if __name__ == '__main__':
+    while True:
+        try:
+            lista_numeros = []
+            menu = Menu()
 
-        if menu == '0':
-            print('>>>Programa encerrado<<<')
-            break
+            if menu == '0':
+                print('>>>Programa encerrado<<<')
+                break
 
-        elif menu == '1':
-            while True:
-                numeros = getQuantNums()
-                apostas = getQuantApostas()
-                
-                if numeros < apostas:
-                    print('\n>>>número de apostas inválido<<<\n')
-                    continue
-                else:
-                    for e in range(apostas):
-                        sortear(numeros)
+            elif menu == '1':
+                while True:
+                    numeros = getQuantNums()
+                    apostas = getQuantApostas()
+                    
+                    if numeros < apostas:
+                        print('\n>>>número de apostas inválido<<<\n')
+                        continue
+                    else:
+                        for e in range(apostas):
+                            sortear(numeros)
 
-                    print('\n')
-                    escreverLista(lista_numeros)
-                    break
-        else:
-            print('>>>Escolha uma ds duas opções!<<<')
+                        print('\n')
+                        escreverLista(lista_numeros)
+                        break
+            else:
+                print('>>>Escolha uma ds duas opções!<<<')
 
-    except:
-        print('ERRO: Ocorreu algo inesperado, tente novamente!')
-
-
-
-
-
-        
+        except:
+            print('ERRO: Ocorreu algo inesperado, tente novamente!')

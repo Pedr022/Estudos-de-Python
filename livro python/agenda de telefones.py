@@ -107,26 +107,27 @@ def menu():
 ''')
     return valida_faixa_inteiro('escolha uma opção: ', 0, 6)
 
-while True:
-    opcao = menu()
+if __name__ == '__main__':
+    while True:
+        opcao = menu()
 
-    if opcao == 0:
-        break
+        if opcao == 0:
+            break
 
-    elif opcao == 1:
-        novo()
+        elif opcao == 1:
+            novo()
 
-    elif opcao == 2:
-        altera()
+        elif opcao == 2:
+            altera()
 
-    elif opcao == 3:
-        apaga()
+        elif opcao == 3:
+            apaga()
 
-    elif opcao == 4:
-        lista()
+        elif opcao == 4:
+            lista()
 
-    elif opcao == 5:
-        grava()
+        elif opcao == 5:
+            grava()
 
-    elif opcao == 6:
-        le()
+        elif opcao == 6:
+            le()

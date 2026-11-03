@@ -72,27 +72,28 @@ def menu():
 ''')
     return input('>>>: ')
 
-fila_unica = Fila()
+if __name__ == '__main__':
+    fila_unica = Fila()
 
-while True:
-    try:
-        resposta = menu()
-        if resposta == '0':
-            raise KeyboardInterrupt
+    while True:
+        try:
+            resposta = menu()
+            if resposta == '0':
+                raise KeyboardInterrupt
+                break
+            elif resposta == '1':
+                fila_unica.AddFila(input('Digite seu nome: '))
+            elif resposta == '2':
+                fila_unica.Atender()
+                mostrarFila()
+            elif resposta == '3':
+                mostrarFila()
+            else:
+                print('Escolha uma das opções')
+        except TypeError:
+            NomeErro()
+        except KeyboardInterrupt:
+            print('Programa enerrado!')
             break
-        elif resposta == '1':
-            fila_unica.AddFila(input('Digite seu nome: '))
-        elif resposta == '2':
-            fila_unica.Atender()
-            mostrarFila()
-        elif resposta == '3':
-            mostrarFila()
-        else:
-            print('Escolha uma das opções')
-    except TypeError:
-        NomeErro()
-    except KeyboardInterrupt:
-        print('Programa enerrado!')
-        break
-    except:
-        ListErro()
+        except:
+            ListErro()
