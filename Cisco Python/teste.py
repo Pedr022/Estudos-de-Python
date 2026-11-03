@@ -80,7 +80,6 @@ if __name__ == '__main__':
             resposta = menu()
             if resposta == '0':
                 raise KeyboardInterrupt
-                break
             elif resposta == '1':
                 fila_unica.AddFila(input('Digite seu nome: '))
             elif resposta == '2':
