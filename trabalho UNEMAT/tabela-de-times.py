@@ -20,20 +20,20 @@ def AddTime():
 def MostrarTabela(tabela):
     global titulo
 
-    print('\n', '+'+('-'*104), end='+')
-    print('\n', '|', end='')
+    print('\n', ' +'+('-'*104), end='+')
+    print('\n', ' |', end='')
     
     for e in titulo:
         print(f'{e:<20}', end='|')
         
-    print('\n', f'{"+":-<21}'*5, end='+')
+    print('\n', ' |'+('-'*104), end='|')
     
     for x, lin in enumerate(tabela):
         print(f'\n{x+1}.|', end='')
         for e in lin:
             print(f'{e:<20}', end='|')
             
-    print('\n','+'+('-'*104), end='+')
+    print('\n',' +'+('-'*104), end='+')
 
 def Desempate(tabela):
     for x in range(len(tabela)-1):
