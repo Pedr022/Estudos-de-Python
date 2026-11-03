@@ -1,5 +1,4 @@
 titulo = ['Nome', 'Pontos', 'Gols Marcados', 'Gols Sofridos', 'Saldo de Gols']
-tabela_times = []
 
 def AddTime():
     global titulo
@@ -65,6 +64,8 @@ def Menu():
     return int(input('>>>: '))
 
 if __name__ == '__main__':
+    tabela_times = []
+
     while True:
         try:
             respostas = Menu()
