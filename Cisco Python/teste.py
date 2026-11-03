@@ -56,11 +56,11 @@ class Fila:
     def getLenFila(self):
         return len(self.__ListaFila)
 
-def mostrarFila():
-    fila = fila_unica.getFila()
-    for x,cliente in enumerate(fila):
-        nome, senha = cliente
-        print(f'{x+1}. {nome}: {senha}', end=' | ')
+    def mostrarFila(self):
+        fila = self.getFila()
+        for x,cliente in enumerate(fila):
+            nome, senha = cliente
+            print(f'{x+1}. {nome} : {senha}', end=' | ')
 
 def menu():
     print('''
@@ -84,9 +84,9 @@ if __name__ == '__main__':
                 fila_unica.AddFila(input('Digite seu nome: '))
             elif resposta == '2':
                 fila_unica.Atender()
-                mostrarFila()
+                fila_unica.mostrarFila()
             elif resposta == '3':
-                mostrarFila()
+                fila_unica.mostrarFila()
             else:
                 print('Escolha uma das opções')
         except TypeError:
