@@ -64,24 +64,25 @@ def Menu():
 ''')
     return int(input('>>>: '))
 
-while True:
-    try:
-        respostas = Menu()
+if __name__ == '__main__':
+    while True:
+        try:
+            respostas = Menu()
 
-        if respostas == 0:
-            print('Programa encerrado!')
-            break
-        elif respostas == 1:
-            tabela_times.append(AddTime())
-        elif respostas == 2:
-            if tabela_times[0] != None:
-                OrdenarTabela(tabela_times)
+            if respostas == 0:
+                print('Programa encerrado!')
                 break
-        else:
-            print('ERRO: Selecione uma das opções acima!')
+            elif respostas == 1:
+                tabela_times.append(AddTime())
+            elif respostas == 2:
+                if tabela_times[0] != None:
+                    OrdenarTabela(tabela_times)
+                    break
+            else:
+                print('ERRO: Selecione uma das opções acima!')
+                
+        except IndexError:
+            print('ERRO: Nenhum time foi adicionado')
+        except:
+            print('ERRO: Valor inválido!')
             
-    except IndexError:
-        print('ERRO: Nenhum time foi adicionado')
-    except:
-        print('ERRO: Valor inválido!')
-        
