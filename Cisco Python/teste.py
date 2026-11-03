@@ -60,7 +60,7 @@ def mostrarFila():
     fila = fila_unica.getFila()
     for x,cliente in enumerate(fila):
         nome, senha = cliente
-        print(f'{x+1}. {nome}:{senha}', end=' | ')
+        print(f'{x+1}. {nome}: {senha}', end=' | ')
 
 def menu():
     print('''
