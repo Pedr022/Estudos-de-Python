@@ -14,7 +14,6 @@ def EliminEspacos(texto):
     texto_mod = texto.split()
     return ''.join(texto_mod)
 
-
 class Fila:
     def __init__(self):
         self.__ListaFila = []
